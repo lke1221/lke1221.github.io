@@ -1,6 +1,10 @@
 title:            만들어지는 중
 tagline:          A beautiful theme.
-description:      Describe your website.
+description:      배운 내용 정리
+url:  https://lke1221.github.io
+baseurl: '/'
+google_analytics: 'G-CJ0QQ1R2ZP'
+disqus_shortname: 'github blog'
 canonical: http://jekyll.gtat.me
 
 # Owner/author information
@@ -8,9 +12,9 @@ owner:
   name:           lke
   avatar:         avatar.png
   bio:            "Aesthete & Athlete"
-  email:          lke001221@gmail.com
+  email:          kucs19320@gmail.com
   github:         lke1221
-  instagram:      kkwong1221
+  disqus:         'github blog'
   location:       "Seoul, KR"
   # Plug in your disqus shortname!
 
