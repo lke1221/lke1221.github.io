@@ -1,0 +1,18 @@
+I"h<p><a href="https://zeddios.tistory.com/1222?category=682196">https://zeddios.tistory.com/1222?category=682196</a></p>
+
+<p>이 분 설명이 정말 잘 되어있어서 보면서 따라했다.</p>
+
+<p>다만 몇 번 시행착오를 겪었는데, 이 글은 그것들을 모아서 정리한 글이다!</p>
+
+<ol>
+  <li>로컬에 Jekyll 설치</li>
+</ol>
+
+<p>```gem install jekyll bundler</p>
+
+<p>나는 Windows라서 먼저 Ruby 설치가 필요했다.</p>
+
+<p><img src="http://localhost:4000/images/install_ruby.png" alt="Ruby 설치" /></p>
+
+<p>rubyinstaller.org/downloads/ 에서 WITH DEVKIT으로 설치했다.</p>
+:ET

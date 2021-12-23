@@ -1,0 +1,50 @@
+I"�<p>블로그 만들기: <a href="https://zeddios.tistory.com/1222?category=682196">https://zeddios.tistory.com/1222?category=682196</a><br />
+테마 적용하기: <a href="https://zeddios.tistory.com/1223?category=682196">https://zeddios.tistory.com/1223?category=682196</a> <br />
+<br />
+이 분 설명이 정말 잘 되어있어서 보면서 따라했다.<br />
+다만 몇 번 시행착오를 겪었는데, 이 글은 그것들을 모아서 정리한 글이다!</p>
+
+<h3 id="블로그-만들기-파트"><strong>블로그 만들기 파트</strong></h3>
+<h4 id="1-로컬에-jekyll-설치"><strong>1. 로컬에 Jekyll 설치</strong></h4>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span> <span class="n">bundler</span></code></pre></figure>
+
+<p>Windows는 먼저 Ruby 설치가 필요하다.<br />
+<img src="http://localhost:4000/images/install_ruby.png" alt="Ruby 설치" /> 
+rubyinstaller.org/downloads/ 에서 WITH DEVKIT으로 설치한 뒤 gem install 명령어를 다시 실행해주면 잘 된다.<br />
+이 때 Add Ruby executables to your PATH를 반드시 체크해야 한다.<br />
+<a href="https://blog.psangwoo.com/coding/2017/04/02/install-jekyll-on-windows.html">참고한 글</a></p>
+
+<h4 id="2-jekyll을-로컬서버에-띄우기"><strong>2. Jekyll을 로컬서버에 띄우기</strong></h4>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">bundle</span> <span class="nb">exec</span> <span class="n">jekyll</span> <span class="n">serve</span></code></pre></figure>
+
+<p>했더니 cannot load such file –webrick (LoadError)가 발생했다.<br />
+찾아보니 ruby 3.0.0부터 webrick이 기본으로 포함된 gem에서 빠지는 바람에 생기는 문제라고 한다.<br />
+bundle add webrick으로 해결하였다.<br />
+<a href="https://junho85.pe.kr/1850">참고한 글</a></p>
+
+<p><br /></p>
+<h3 id="테마-적용하기-파트"><strong>테마 적용하기 파트</strong></h3>
+<p>나는 <a href="https://jekyllthemes.io/theme/balzac-for-jekyll&gt;">이 테마</a>를 선택했다.</p>
+<h4 id="1-jekyll을-로컬서버에-띄우기"><strong>1. Jekyll을 로컬서버에 띄우기</strong></h4>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">bundle</span> <span class="nb">exec</span> <span class="n">jekyll</span> <span class="n">serve</span></code></pre></figure>
+
+<p>이 명령어를 실행했더니 여러 문제가 연달아 발생했다.</p>
+
+<ol>
+  <li>cannot load such file –tzinfo (LoadError)
+    <ul>
+      <li>bundle add tzinfo로 해결</li>
+    </ul>
+  </li>
+  <li>No source of timezone data could be found. (TZInfo::DataSourceNotFound)
+    <ul>
+      <li>gem ‘tzinfo-data’, platforms: [:mingw, :mswin, :x64_mingw]을 Gemfile에 추가</li>
+      <li><a href="https://stackoverflow.com/questions/51069616/jekyll-3-7-3-error-no-source-of-timezone-data-could-be-found">참고한 글</a></li>
+    </ul>
+  </li>
+</ol>
+
+:ET
