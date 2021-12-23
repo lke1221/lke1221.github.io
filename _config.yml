@@ -4,7 +4,6 @@ description:      배운 내용 정리
 url:  https://lke1221.github.io
 baseurl: '/'
 google_analytics: 'G-CJ0QQ1R2ZP'
-disqus_shortname: 'github blog'
 canonical: http://jekyll.gtat.me
 
 # Owner/author information
